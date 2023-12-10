@@ -40,3 +40,7 @@ Topics:
 
     Session Task:
       use restcountries API console all the country names & flags
+
+Task:
+
+  Practice the restcountries using fetch, before coming next week

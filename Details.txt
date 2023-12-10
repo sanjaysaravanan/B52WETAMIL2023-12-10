@@ -1,0 +1,42 @@
+
+Topics:
+
+  1. Promise: ( In-Built Object )
+    Object to understand the completion(or failure) of an asynchronous event/operation
+
+    MDN-> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+    State:
+      pending --->  initial state, neither fulfilled(success) nor rejected(failure).
+
+      fullfilled ---> meaning that the operation was completed successfully with a value
+
+      rejected ---> meaning that the operation failed with a reason
+
+      whenever a promise is getting rejected it will throw an error
+
+    methods:
+      then ---> executed when the promise is fullfilled/resolved
+      catch ---> executed when the promise is rejected/unfullfilled
+    
+    Chaining --> returning an promise from resolvement in parent promise
+    if any chained promise gets rejected it is handled by the catch at the tail of the chain
+      execution time --> sum of time taken by all chained promises
+
+    All --> Independent Promise triggered simultaneously/parallel
+      execution time: Maximum time among all the promises
+
+    Any --> trigger independent promises
+      resolve is success when any one is resolved
+      exeution: Time taken first resolved promise
+      value returned: resolved value of the first promise
+      Error: All Promises rejected
+
+  3. Fetch & then
+    Fetch -> Interface to make an api call
+      response as promise .then 
+        --> convert response to json(response.json()) as promsie .then 
+        -> (json -> operation on json)
+
+    Session Task:
+      use restcountries API console all the country names & flags

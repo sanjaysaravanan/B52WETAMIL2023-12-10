@@ -16,17 +16,17 @@ Topics:
       whenever a promise is getting rejected it will throw an error
 
     methods:
-      then ---> executed when the promise is fullfilled/resolved
-      catch ---> executed when the promise is rejected/unfullfilled
+      then ---> executed when the promise is fullfilled/resolved with a value
+      catch ---> executed when the promise is rejected/unfullfilled with an error
     
-    Chaining --> returning an promise from resolvement in parent promise
+    Chaining --> returning an promise inside resolvement in parent promise
     if any chained promise gets rejected it is handled by the catch at the tail of the chain
       execution time --> sum of time taken by all chained promises
 
-    All --> Independent Promise triggered simultaneously/parallel
+    All --> Independent Promise triggered simultaneously/parallel,  all the promises should get resolved
       execution time: Maximum time among all the promises
 
-    Any --> trigger independent promises
+    Any --> trigger independent promises,
       resolve is success when any one is resolved
       exeution: Time taken first resolved promise
       value returned: resolved value of the first promise
